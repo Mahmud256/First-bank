@@ -13,6 +13,12 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
         return;
     }
 
+    if(newDepositAmmount<0)
+    {
+        alert("Please provide a valid Number");
+        return;
+    }
+
     //step-3 get the current withdraw total
     const withdrawTotalElement = document.getElementById('withdraw-total');
     const previousWithdrawTotalString = withdrawTotalElement.innerText;

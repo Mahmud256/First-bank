@@ -10,6 +10,12 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
         alert('Please Provide a valid number');
         return;
     }
+
+    if(newDepositAmmount<0)
+    {
+        alert("Please provide a valid Number");
+        return;
+    }
     
     //step-3 get the current deposit total
     const depositTotalElement = document.getElementById('deposit-total');
