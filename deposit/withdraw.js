@@ -8,14 +8,13 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     //step-7 clear the withdraw field
     withdrawField.value = '';
 
-    if (isNaN(newWithdrawAmmount)) {
-        alert('Please Provide a valid number');
+    if (newWithdrawAmmount<0) {
+        alert("Please provide a valid Number");
         return;
     }
 
-    if(newDepositAmmount<0)
-    {
-        alert("Please provide a valid Number");
+    if (isNaN(newWithdrawAmmount)) {
+        alert('Please Provide a valid number');
         return;
     }
 
@@ -35,10 +34,10 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
         return;
     }
 
+
     //step-4 add numbers to set the total withdraw
     const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmmount;
     withdrawTotalElement.innerText = currentWithdrawTotal;
-
 
     //step-6 minus numbers to set the total balance
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmmount;
